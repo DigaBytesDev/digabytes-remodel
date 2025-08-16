@@ -1,0 +1,106 @@
+.hero {
+  background: $hero-background;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 40px;
+
+  &__logo {
+    height: max-content;
+    margin-bottom: 50px;
+    // border: 1px solid white;
+  }
+
+  &__content {
+    max-width: 34rem;
+    height: max-content;
+  }
+
+  &__tagline {
+    font-size: calc($fs-header - 1.5rem);
+    color: $header-color;
+    max-width: 16ch;
+    margin-bottom: 30px;
+    line-height: 1.1;
+    justify-self: center;
+  }
+
+  &__subtext {
+    font-size: $fs-body;
+    color: $body-color;
+    max-width: 40ch;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.brand {
+  //   justify-content: center;
+
+  &__mark {
+    width: 100%;
+    aspect-ratio: 1;
+    margin-bottom: 0;
+    margin: auto;
+  }
+
+  &__name {
+    display: grid;
+    justify-items: center;
+    line-height: 1;
+    margin-top: -40px;
+  }
+
+  &__word {
+    font-size: calc($fs-header - 1.5rem);
+    font-weight: $fw-bold;
+    color: $cc-indigo;
+  }
+
+  &__sub {
+    font-size: 2rem;
+    color: $cc-light-cyan;
+    font-weight: $fw-lt;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .hero {
+    height: 100vh;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-align: left;
+
+    &__content {
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
+    &__tagline {
+      font-size: $fs-header;
+    }
+
+    &__logo {
+      margin-right: auto;
+    }
+
+    &__button {
+      justify-content: left;
+    }
+  }
+
+  .brand {
+    &__word {
+      font-size: $fs-header;
+    }
+
+    &__sub {
+      font-size: 3rem;
+    }
+  }
+}

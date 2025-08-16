@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$cc-charcoal: #0f0f10; // hero background
+$cc-light-charcoal: #18191b; // section background
+$cc-dk-charcoal: #1b1c20; // form inputs
+$cc-light-cyan: #00d4d8; // button
+$cc-light-cyan-opac0: rgba(0, 212, 216, 0); // fading line
+$cc-cyan-glowing: #0afaff; // Color for "Dev"
+$cc-cyan-opac50: rgba(10, 250, 255, 0.5);
+$cc-white-opac25: rgba(255, 255, 255, 0.25);
+$cc-white-opac90: rgba(255, 255, 255, 0.9); // for button text
+
+$cc-indigo: #2f12a2; // Color for "DigaBytes"
+$cc-light-gray: #d1d1d1; // body text color
+$cc-white: #ffffff; // headings color
+
+$gradient-boxes: linear-gradient(
+  0deg,
+  #3b3b3b 0%,
+  rgba(59, 59, 59, 0.5) 100%
+); // for boxes
+$gradient-cyan: linear-gradient(
+  135deg,
+  #00d4d8 0%,
+  #00a0a3 100%
+); // for buttons
+$gradient-hr: linear-gradient(
+  30deg,
+  $cc-light-cyan 0%,
+  $cc-light-cyan-opac0 100%
+);
+
+$ff-main: "Montserrat", sans-serif;
+
+$fw-lt: 300;
+$fw-reg: 400;
+$fw-med: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+
+$fs-body: 1.5rem;
+$fs-header: 4rem;
+
+// Plug In Values
+$hero-background: $cc-charcoal;
+$section-background: $cc-light-charcoal;
+$button-background: $gradient-cyan;
+$button-txt: $cc-white-opac90;
+
+$form-input: $cc-dk-charcoal;
+$form-txt: $cc-white;
+
+$body-size: $fs-body;
+$body-color: $cc-light-gray;
+$body-weight: $fw-reg;
+
+$header-color: $cc-white;
+$header-weight: $fw-bold;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $ff-main;
+}
+
+body {
+  background: $section-background;
+}

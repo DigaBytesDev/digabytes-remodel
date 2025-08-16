@@ -1,0 +1,106 @@
+.tracking {
+  // handles letter spacing (tracking)
+  &--12 {
+    letter-spacing: 0.12rem;
+  }
+
+  &--5 {
+    letter-spacing: 0.05rem;
+  }
+}
+
+.line-height {
+  // handles line height
+  &--1-1 {
+    line-height: 1.1;
+  }
+
+  &--1-5 {
+    line-height: 1.5;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &--col {
+    flex-direction: column;
+  }
+
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.shadow {
+  //   &--glow {
+  // for buttons
+  // box-shadow: 0px 0px 75px $cc-cyan-opac50, 0px 4px 50px $cc-white-opac25;
+  //   }
+  &--box {
+    // for cards and contact form
+    box-shadow: (0, 8px, 20px, 20px, rgba(0, 0, 0, 0.35));
+  }
+}
+
+.btn {
+  padding: 10px 35px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  font-size: calc($fs-body - 0.5rem);
+  font-weight: $fw-bold;
+  transition: all 0.3s ease;
+
+  &--primary {
+    background: $button-background;
+    color: $button-txt;
+    box-shadow: 0px 4px 50px $cc-white-opac25;
+    // box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5),
+    //   -2px -2px 5px rgba(255, 255, 255, 0.5);
+
+    &:hover {
+      box-shadow: 0px 0px 75px $cc-cyan-opac50, 0px 4px 50px $cc-white-opac25;
+      scale: 1.05;
+    }
+  }
+}
+
+.card {
+  background: $gradient-boxes;
+  box-shadow: (0 8px 20px 20px rgba(0, 0, 0, 0.35));
+  min-height: 420px;
+  margin-bottom: 30px;
+  width: min(90%, 320px);
+  padding: 120px 30px;
+  border-radius: 5px;
+
+  hr {
+    width: 35px;
+    border-color: $cc-light-cyan;
+  }
+
+  &-title {
+    color: $header-color;
+    font-weight: $fw-bold;
+    letter-spacing: 0.05rem;
+    margin-bottom: 8px;
+  }
+
+  &-content {
+    margin-top: 40px;
+    line-height: 1.5rem;
+    color: $body-color;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card {
+    width: min(90%, 310px);
+    // &:nth-child(2) {
+    //   margin-right: 15px;
+    //   margin-left: 15px;
+    // }
+  }
+}

@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #18191b;
+}
+
+.tracking--12 {
+  letter-spacing: 0.12rem;
+}
+.tracking--5 {
+  letter-spacing: 0.05rem;
+}
+
+.line-height--1-1 {
+  line-height: 1.1;
+}
+.line-height--1-5 {
+  line-height: 1.5;
+}
+
+.flex {
+  display: flex;
+}
+.flex--col {
+  flex-direction: column;
+}
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.shadow--box {
+  box-shadow: 0, 8px, 20px, 20px, rgba(0, 0, 0, 0.35);
+}
+
+.btn {
+  padding: 10px 35px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+.btn--primary {
+  background: linear-gradient(135deg, #00d4d8 0%, #00a0a3 100%);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 50px rgba(255, 255, 255, 0.25);
+}
+.btn--primary:hover {
+  box-shadow: 0px 0px 75px rgba(10, 250, 255, 0.5), 0px 4px 50px rgba(255, 255, 255, 0.25);
+  scale: 1.05;
+}
+
+.card {
+  background: linear-gradient(0deg, #3b3b3b 0%, rgba(59, 59, 59, 0.5) 100%);
+  box-shadow: 0 8px 20px 20px rgba(0, 0, 0, 0.35);
+  min-height: 420px;
+  margin-bottom: 30px;
+  width: min(90%, 320px);
+  padding: 120px 30px;
+  border-radius: 5px;
+}
+.card hr {
+  width: 35px;
+  border-color: #00d4d8;
+}
+.card-title {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  margin-bottom: 8px;
+}
+.card-content {
+  margin-top: 40px;
+  line-height: 1.5rem;
+  color: #d1d1d1;
+}
+
+@media screen and (min-width: 1000px) {
+  .card {
+    width: min(90%, 310px);
+  }
+}
+.hero {
+  background: #0f0f10;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.hero__logo {
+  height: max-content;
+  margin-bottom: 50px;
+}
+.hero__content {
+  max-width: 34rem;
+  height: max-content;
+}
+.hero__tagline {
+  font-size: 2.5rem;
+  color: #ffffff;
+  max-width: 16ch;
+  margin-bottom: 30px;
+  line-height: 1.1;
+  justify-self: center;
+}
+.hero__subtext {
+  font-size: 1.5rem;
+  color: #d1d1d1;
+  max-width: 40ch;
+  margin-bottom: 30px;
+}
+.hero__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand__mark {
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 0;
+  margin: auto;
+}
+.brand__name {
+  display: grid;
+  justify-items: center;
+  line-height: 1;
+  margin-top: -40px;
+}
+.brand__word {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2f12a2;
+}
+.brand__sub {
+  font-size: 2rem;
+  color: #00d4d8;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 1000px) {
+  .hero {
+    height: 100vh;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+  .hero__content {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .hero__tagline {
+    font-size: 4rem;
+  }
+  .hero__logo {
+    margin-right: auto;
+  }
+  .hero__button {
+    justify-content: left;
+  }
+  .brand__word {
+    font-size: 4rem;
+  }
+  .brand__sub {
+    font-size: 3rem;
+  }
+}
+.about {
+  margin-top: 40px;
+}
+.about__intro {
+  padding: 0 30px;
+  align-self: center;
+}
+.about__headline {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 20px;
+  justify-self: center;
+  align-self: center;
+}
+.about-hr {
+  background: linear-gradient(30deg, #00d4d8 0%, rgba(0, 212, 216, 0) 100%);
+  height: 5px;
+  border: none;
+  width: 75%;
+}
+
+.cards {
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .about__intro {
+    width: clamp(1024px, 100%, 1050px);
+  }
+  .about__headline {
+    font-size: 1.75rem;
+    line-height: 3rem;
+    margin-bottom: 20px;
+  }
+  .cards {
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: clamp(1024px, 100%, 1050px);
+  }
+}
