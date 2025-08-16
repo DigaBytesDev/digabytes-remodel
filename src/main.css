@@ -85,6 +85,59 @@ body {
   color: #d1d1d1;
 }
 
+.step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+}
+.step:last-child > .step__content::after {
+  display: none;
+}
+.step__number {
+  margin-right: 12px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #00d4d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0px 0px 75px rgba(10, 250, 255, 0.5), 0px 4px 50px rgba(255, 255, 255, 0.25);
+}
+.step__number p {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+.step__content {
+  min-width: 195px;
+  position: relative;
+}
+.step__content::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(135deg, #00d4d8 0%, #00a0a3 100%);
+  transform: rotate(90deg);
+  bottom: -50px;
+}
+.step-title {
+  color: #ffffff;
+  margin-bottom: 5px;
+  letter-spacing: 0.05rem;
+  font-size: 1.875rem;
+}
+.step-description {
+  color: #d1d1d1;
+  letter-spacing: 0.02rem;
+  font-size: 0.93rem;
+  line-height: 1.2rem;
+  max-width: 20ch;
+}
+
 @media screen and (min-width: 1000px) {
   .card {
     width: min(90%, 310px);
@@ -219,5 +272,74 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: clamp(1024px, 100%, 1050px);
+  }
+}
+.contact {
+  align-items: center;
+  justify-content: center;
+}
+.contact h1 {
+  color: #ffffff;
+  font-size: 2.1rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.contact__form {
+  width: clamp(350px, 80%, 400px);
+  margin: 1.5rem;
+  background: linear-gradient(0deg, #3b3b3b 0%, rgba(59, 59, 59, 0.5) 100%);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0, 8px, 20px, 20px, rgba(0, 0, 0, 0.35);
+}
+
+.form--contact {
+  width: 100%;
+  margin: 0 auto;
+}
+.form--contact h2 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+.form--contact .success {
+  margin-bottom: 1rem;
+  color: #00ff00;
+  font-weight: 700;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #0f0f10;
+  border-radius: 4px;
+  background: #1b1c20;
+  outline: none;
+  color: #ffffff;
+}
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+@media screen and (min-width: 1000px) {
+  .contact {
+    align-self: center;
+    justify-self: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: clamp(1024px, 100%, 1050px);
+  }
+  .contact__steps {
+    margin-left: 40px;
   }
 }

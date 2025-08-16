@@ -1,0 +1,94 @@
+.contact {
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: $cc-white;
+    font-size: 2.1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  &__form {
+    width: clamp(350px, 80%, 400px);
+    margin: 1.5rem;
+    background: $gradient-boxes;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: (0, 8px, 20px, 20px, rgba(0, 0, 0, 0.35));
+  }
+}
+
+.form {
+  &--contact {
+    width: 100%;
+    margin: 0 auto;
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: $cc-white;
+      text-align: center;
+    }
+
+    .success {
+      margin-bottom: 1rem;
+      color: $cc-success;
+      font-weight: $fw-bold;
+    }
+  }
+
+  &-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $cc-white;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid $cc-charcoal;
+      border-radius: 4px;
+      background: $cc-dk-charcoal;
+      outline: none;
+      color: $cc-white;
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    // .submit-btn {
+    //   background-color: $cc-accent;
+    //   color: $cc-white;
+    //   border: none;
+    //   padding: 0.75rem 1.5rem;
+    //   border-radius: 4px;
+    //   cursor: pointer;
+    //   font-weight: bold;
+
+    //   &:hover {
+    //     background-color: $cc-accent;
+    //   }
+    // }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .contact {
+    align-self: center;
+    justify-self: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: clamp(1024px, 100%, 1050px);
+
+    &__steps {
+      margin-left: 40px;
+    }
+  }
+}

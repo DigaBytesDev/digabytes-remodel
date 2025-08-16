@@ -34,10 +34,6 @@
 }
 
 .shadow {
-  //   &--glow {
-  // for buttons
-  // box-shadow: 0px 0px 75px $cc-cyan-opac50, 0px 4px 50px $cc-white-opac25;
-  //   }
   &--box {
     // for cards and contact form
     box-shadow: (0, 8px, 20px, 20px, rgba(0, 0, 0, 0.35));
@@ -92,6 +88,66 @@
     margin-top: 40px;
     line-height: 1.5rem;
     color: $body-color;
+  }
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+
+  &:last-child > .step__content::after {
+    display: none;
+  }
+
+  &__number {
+    margin-right: 12px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: $cc-light-cyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 0px 75px $cc-cyan-opac50, 0px 4px 50px $cc-white-opac25;
+
+    p {
+      font-size: 1.875rem;
+      font-weight: $fw-bold;
+      color: $cc-white;
+    }
+  }
+
+  &__content {
+    min-width: 195px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 60px;
+      background: $gradient-cyan;
+      transform: rotate(90deg);
+      bottom: -50px;
+    }
+  }
+
+  &-title {
+    color: $header-color;
+    margin-bottom: 5px;
+    letter-spacing: 0.05rem;
+    font-size: 1.875rem;
+  }
+
+  &-description {
+    color: $body-color;
+    letter-spacing: 0.02rem;
+    font-size: 0.93rem;
+    line-height: 1.2rem;
+    max-width: 20ch;
   }
 }
 
