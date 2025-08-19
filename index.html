@@ -6,9 +6,10 @@
     <title>DigaBytes Dev</title>
     <link rel="icon" href="assets/img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="src/main.css" />
+    <script defer src="src/main.js"></script>
   </head>
   <body>
-    <section class="hero flex flex--col">
+    <section id="hero" class="hero flex flex--col">
       <div class="hero__logo flex flex-col flex-center">
         <figure class="brand" aria-label="DigaBytes Dev">
           <img
@@ -16,8 +17,6 @@
             src="assets/img/logo.png"
             alt="DigaBytes logo"
             decoding="async"
-            height="300px"
-            width="300px"
           />
           <figcaption class="brand__name">
             <span class="brand__word">DigaBytes</span>
@@ -31,13 +30,13 @@
           Simple, professional websites for small businesses and personal brands
         </p>
         <div class="hero__button">
-          <button class="btn btn--cta btn--primary tracking--12">
+          <a href="#contact" class="btn btn--cta btn--primary tracking--12">
             Request a Free Quote
-          </button>
+          </a>
         </div>
       </div>
     </section>
-    <section class="about flex flex--col">
+    <section id="about" class="about flex flex--col">
       <div class="about__intro flex flex--col">
         <p class="about__headline">
           Your website should work as hard as you do, attracting the right
@@ -72,7 +71,7 @@
         </div>
       </div>
     </section>
-    <section class="contact flex flex--col">
+    <section id="contact" class="contact flex flex--col">
       <div class="contact__steps flex flex--col">
         <h1>How It Works</h1>
         <div class="step">

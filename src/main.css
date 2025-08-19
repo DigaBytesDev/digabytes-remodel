@@ -8,6 +8,14 @@
   font-family: "Montserrat", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #18191b;
 }
@@ -148,7 +156,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-bottom: 40px;
+  padding: 0 15px 100px 15px;
 }
 .hero__logo {
   height: max-content;
@@ -179,7 +187,7 @@ body {
 }
 
 .brand__mark {
-  width: 100%;
+  width: 90%;
   aspect-ratio: 1;
   margin-bottom: 0;
   margin: auto;
@@ -188,7 +196,7 @@ body {
   display: grid;
   justify-items: center;
   line-height: 1;
-  margin-top: -40px;
+  margin-top: -50px;
 }
 .brand__word {
   font-size: 2.5rem;
@@ -201,12 +209,35 @@ body {
   font-weight: 300;
 }
 
+@media screen and (min-width: 700px) {
+  .hero__tagline {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  .hero__subtext {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .brand__mark {
+    width: 60%;
+  }
+  .brand__name {
+    margin-top: -55px;
+  }
+  .brand__word {
+    font-size: 4rem;
+  }
+  .brand__sub {
+    font-size: 3rem;
+  }
+}
 @media screen and (min-width: 1000px) {
   .hero {
     height: 100vh;
     align-items: center;
     flex-direction: row-reverse;
     text-align: left;
+    padding-left: 40px;
   }
   .hero__content {
     margin-left: auto;
@@ -221,15 +252,19 @@ body {
   .hero__button {
     justify-content: left;
   }
-  .brand__word {
-    font-size: 4rem;
+  .brand {
+    display: flex;
+    flex-direction: column;
   }
-  .brand__sub {
-    font-size: 3rem;
+  .brand__mark {
+    width: 80%;
+  }
+  .brand__name {
+    margin-top: -50px;
   }
 }
 .about {
-  margin-top: 40px;
+  margin-top: 100px;
 }
 .about__intro {
   padding: 0 30px;
@@ -284,6 +319,10 @@ body {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
+.contact__steps {
+  align-items: center;
+  justify-content: center;
+}
 .contact__form {
   width: clamp(350px, 80%, 400px);
   margin: 1.5rem;
@@ -330,6 +369,11 @@ body {
   resize: vertical;
 }
 
+@media screen and (min-width: 700px) {
+  .contact__steps h1 {
+    font-size: 3rem;
+  }
+}
 @media screen and (min-width: 1000px) {
   .contact {
     align-self: center;

@@ -9,6 +9,11 @@
     margin-bottom: 4rem;
   }
 
+  &__steps {
+    align-items: center;
+    justify-content: center;
+  }
+
   &__form {
     width: clamp(350px, 80%, 400px);
     margin: 1.5rem;
@@ -75,6 +80,16 @@
     //     background-color: $cc-accent;
     //   }
     // }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .contact {
+    &__steps {
+      h1 {
+        font-size: 3rem;
+      }
+    }
   }
 }
 

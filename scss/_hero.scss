@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-bottom: 40px;
+  // padding-bottom: 40px;
+  padding: 0 15px 100px 15px;
 
   &__logo {
     height: max-content;
@@ -43,7 +44,7 @@
   //   justify-content: center;
 
   &__mark {
-    width: 100%;
+    width: 90%;
     aspect-ratio: 1;
     margin-bottom: 0;
     margin: auto;
@@ -53,7 +54,7 @@
     display: grid;
     justify-items: center;
     line-height: 1;
-    margin-top: -40px;
+    margin-top: -50px;
   }
 
   &__word {
@@ -69,12 +70,45 @@
   }
 }
 
+@media screen and (min-width: 700px) {
+  .hero {
+    &__tagline {
+      font-size: calc($fs-header - 0.5rem);
+      margin-bottom: 20px;
+    }
+
+    &__subtext {
+      font-size: calc($fs-body + 0.5rem);
+      margin-bottom: 30px;
+    }
+  }
+
+  .brand {
+    &__mark {
+      width: 60%;
+    }
+
+    &__name {
+      margin-top: -55px;
+    }
+
+    &__word {
+      font-size: $fs-header;
+    }
+
+    &__sub {
+      font-size: 3rem;
+    }
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .hero {
     height: 100vh;
     align-items: center;
     flex-direction: row-reverse;
     text-align: left;
+    padding-left: 40px;
 
     &__content {
       margin-left: auto;
@@ -95,12 +129,15 @@
   }
 
   .brand {
-    &__word {
-      font-size: $fs-header;
+    display: flex;
+    flex-direction: column;
+
+    &__mark {
+      width: 80%;
     }
 
-    &__sub {
-      font-size: 3rem;
+    &__name {
+      margin-top: -50px;
     }
   }
 }

@@ -68,6 +68,14 @@ $header-weight: $fw-bold;
   font-family: $ff-main;
 }
 
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: $section-background;
 }
